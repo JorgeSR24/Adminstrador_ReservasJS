@@ -1,0 +1,302 @@
+:root {
+
+    --primaryFont: 0;
+}
+
+* {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    color: red;
+    margin-bottom: 1rem;
+}
+p:not(.footer-info p) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-optical-sizing: auto;
+    color: white;
+}
+
+input, select {
+    padding: 0.4rem;
+}
+
+input:hover:not(.btn-submit){
+    border: none;
+    outline: 2px solid deeppink;
+}
+
+
+select:hover{
+    border: none;
+    outline: 2px solid deeppink;
+}
+
+/**Header*/
+
+.header {
+
+    background-image: url("./img/apertura.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bgChange 25s linear infinite;
+    width: 100%;
+}
+    
+
+.header-wrapper{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+        
+.logo{
+    width: 12rem;
+}
+
+.header-btn{
+        margin-top: 2rem;
+        border-radius: 20px;
+        padding: 3px 18px;
+        background: #fb2a3f;
+        border: 0.5px solid black;
+}
+.header-btn a {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-decoration: none;
+}
+   
+
+.header-title{
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+         letter-spacing: 2px;
+        color: #eafd3b;
+        font-size: 45px;
+        text-shadow: 10px 5px 14px rgb(0, 0, 0);
+        margin-top: 30rem;
+}
+
+
+.header-servicios {
+    margin-top: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    list-style: none;
+} 
+.header-servicios  a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+    }
+
+
+/** Formulario */
+
+.header-form{
+    background-color: #fb2a3f;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.form fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+}
+
+ .form-input input:checked{
+    border: 2px solid red;
+} 
+       
+        
+.btn-submit{
+    padding: 0.5rem;
+    background-color:#fb2a3f;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 5px;
+    margin-top: 10px;
+                
+ }
+
+ .btn-submit:hover{
+    background-color:#45d825;
+ }
+        
+
+
+
+.tableBooking {
+    border: 1px solid red;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 350px;
+}
+
+.bodyTable{
+    text-align: center;
+}
+
+
+.footer-info{
+    height: 6rem;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+        
+}
+
+.footer-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00366f;
+    height: 2rem;
+}
+
+.footer-contact a{
+        text-decoration: none;
+        color: white;
+}
+
+
+
+@keyframes bgChange {
+
+    0% {
+        background-image: url("./img/apertura.jpg");
+    }
+
+    20% {
+        background-image: url("./img/apertura.jpg");
+    }
+
+    40% {
+        background-image: url("./img/apertura.jpg");
+    }
+
+    45% {
+        background-image: url("./img/apertura.jpg");
+    }
+
+    50% {
+        background-image: url("./img/Chica-Pase-Temporada-min.jpg");
+    }
+
+    95% {
+        background-image: url("./img/Chica-Pase-Temporada-min.jpg");
+    }
+    
+}
+
+.modal {
+    display: none;
+}
+
+.modal-active {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+
+/** Responsive Design */
+
+@media (width > 850px) {
+    .header-wrapper{
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+    .header-servicios{
+        flex-direction: row;
+
+        li{
+            font-size: 12px;
+        }
+    }
+
+    .logo{
+        width: 8rem;
+    }
+
+    .header-btn{
+        margin-top: 0;
+
+    }
+
+    .btn-image{
+        width: 2rem;
+    }
+
+  }
+
+  @media (width > 1050px) {
+    .logo{
+        width: 12rem;
+    }
+
+    .header-servicios li{
+        font-size: 16px;
+    }
+
+    .btn-image{
+        width: 3rem;
+    }
+
+    .tableBooking {
+        width: 500px;
+    }
+
+    .form fieldset{
+        gap: 1.5rem;
+    }
+
+  }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Reservas Formulario Parque de Atracciones</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/style.css'>
+    <script src='./src/index.js' defer></script>
+</head>
+<body>
+    <header class="header-form">
+        <a href="./index.htm"><img src="./src/img/logo2.png" alt="Logo Cabecera Formulario"></a>
+    </header>
+
+    <main>
+        <form class="form">
+            <fieldset>
+                <legend>Información Personal</legend>
+
+                    <div class="form-input">
+                        <label for="id">Identificativo Reserva</label>
+                        <input type="text" placeholder="Introduzca su DNI" title="Introduzca su Número de Identificación" id="id" tabindex="1">
+                    </div>
+
+                    <div class="form-input">
+                        <label for="mayores">¿Cuantas Personas Mayores de edad vendrán en total?</label>
+                        <input type="number" id="mayores" min="1" placeholder="Introduzca personas mayores o iguales a 18" title="Introduzca personas mayores o iguales a 18" tabindex="2">
+                    </div>
+
+                    <div class="form-input">
+                        <label for="mayores">¿Cuantas Personas Menores de edad asistirán?</label>
+                        <input type="number" id="menores" min="0" placeholder="Introduzca personas menores a 18" title="Introduzca personas menores a 18" tabindex="3">
+                    </div>
+
+                    <div class="form-input">
+                        <label for="fecha">Introduzca fecha de asistencia</label>
+                        <input type="date" id="fecha" tabindex="4">
+                    </div>
+
+                    <div class="form-input">
+                        <label for="horario">Introduzca el Horario</label>
+                        <select id="horario" tabindex="5">
+                            <option selected value="">--Seleccione--</option>
+                            <option value="morning">09:00-15:00</option>
+                            <option value="afternoon">15:00-21:00</option>
+
+                        </select>
+                    </div>
+
+                    
+                    <input class="btn-submit" type="submit" value="Enviar" id="registrar">
+                    
+            </fieldset>
+        </form>
+
+        <section id="modal" class="modal">
+            <div id="modal-info">
+
+            </div>
+
+        <button id="cerrar-modal">Cerrar Modal</button>
+           
+        </section>
+
+        <dialog id="dialogUpdate">
+
+            <form method="dialog">
+                <div class="form-input">
+                    <label for="idUpdate">Identificativo Reserva</label>
+                    <input type="text" placeholder="Introduzca su DNI" title="Introduzca su Número de Identificación" id="idUpdate" tabindex="1">
+                </div>
+
+                <div class="form-input">
+                    <label for="mayores">¿Cuantas Personas Mayores de edad vendrán en total?</label>
+                    <input type="number" id="mayoresUpdate" min="1" placeholder="Introduzca personas mayores o iguales a 18" title="Introduzca personas mayores o iguales a 18" tabindex="2">
+                </div>
+
+                <div class="form-input">
+                    <label for="mayores">¿Cuantas Personas Menores de edad asistirán?</label>
+                    <input type="number" id="menoresUpdate" min="0" placeholder="Introduzca personas menores a 18" title="Introduzca personas menores a 18" tabindex="3">
+                </div>
+
+                <div class="form-input">
+                    <label for="fecha">Introduzca fecha de asistencia</label>
+                    <input type="date" id="fechaUpdate" tabindex="4">
+                </div>
+
+                <div class="form-input">
+                    <label for="horario">Introduzca el Horario</label>
+                    <select id="horarioUpdate" tabindex="5">
+                        <option selected value="">--Seleccione--</option>
+                        <option value="morning">09:00-15:00</option>
+                        <option value="afternoon">15:00-21:00</option>
+
+                    </select>
+                </div>
+
+                
+                <input id="btn-submitUpdate" type="submit" value="Enviar" id="registrar">
+                
+            </form>
+        </dialog>
+
+        <section>
+            <table class="tableBooking">
+                <thead>
+                    <th>ID</th>
+                    <th>Mayores</th>
+                    <th>Menores</th>
+                    <th>🗓️</th>
+                    <th>⏱️</th>
+                    <th>Acción</th>
+                </thead>
+
+                <tbody id="bodyTable" class="bodyTable">
+                
+                </tbody>
+
+
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer-info">
+            <div>
+                <p><strong>Discapacitados:</strong> Necesario acreditar una discapacidad mínima oficialmente reconocida del 33%. Compra en taquillas.</p>
+            </div>
+
+            <div>
+                <p><strong>Familias Numerosas Españolas:</strong>  50% de descuento en la entrada de 1 Día. Imprescindible presentar la documentación pertinente. Compra en taquillas.</p>
+            </div>
+
+        </section>
+
+
+
+        <section class="footer-contact">
+            <a href="tel:+34965004300 "> Atención al cliente +34 965 00 43 00 </a>
+            <span>||</span>
+            <a href="mailto:callcenter@terramiticapark.com">callcenter@terramiticapark.com</a>
+        </section>
+
+    </footer>
+</body>
+</html>
